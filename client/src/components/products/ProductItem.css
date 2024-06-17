@@ -1,0 +1,102 @@
+.singleProduct {
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px 2px rgba(178,178,178,0.334);
+}
+
+.singleProduct:hover {
+    transform: scale(1.02);
+    transition: .7s ease;
+}
+
+.proImg {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.overlayInfo {
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+    /* padding: 1rem 1.5rem; */
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(rgba(0,0,0,0.846), rgba(0,0,0,0.759));
+    bottom: 0;
+    width: 100%;
+    /* height: 100%;  */
+    height: 0;
+    overflow: hidden;
+}
+
+.overlayInfo h5 {
+    color: white;
+    font-size: 15px;
+}
+
+.showOverlayInfo {
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    /* padding: 0; */
+    padding: 1rem 1.5rem;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(rgba(0,0,0,0.846), rgba(0,0,0,0.759));
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    /* height: 0; */
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.showOverlayInfo h5 {
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.icon {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: .5rem;
+    background: orange;
+    font-size: 1.2rem !important;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid transparent;
+    transition: .3s ease;
+}
+
+.icon:hover {
+    background: black;
+    border: 1px solid orange;
+    color: orange;
+}
+
+.proText {
+    justify-content: space-between !important;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.proText h6 {
+    font-size: 15px;
+    overflow: hidden;
+    height: 30px;
+}
+
+.proFooter {
+    padding: 5px;
+}

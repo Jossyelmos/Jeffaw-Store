@@ -1,4 +1,7 @@
 {
     "mongoURI": "mongodb+srv://Amos:2959@jeffaw.gatpipu.mongodb.net/?retryWrites=true&w=majority",
-    "jwtSecret": "secret"
+    "jwtSecret": "secret",
+    "stripe_secret_key": "sk_test_51Ok9NNDgRkBhUUI2jDYMHdFfk8wfJhRkbVJoRVrB485vjmkVLTGsySKJI6uDfDev8eAIvLRvw5EzRlp4ACMUJ36200Ydm8KSfZ",
+    "frontend_url" : "http://localhost:3000",
+    "jeffaw_app_api_key": "AIzaSyCTQq_rAozAh-OL2bbd8s4sQ9fCYxBUkZA"
 }

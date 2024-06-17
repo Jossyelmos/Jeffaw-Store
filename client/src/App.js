@@ -11,6 +11,8 @@ import Home from './components/pages/Home';
 import PrivateRoute from './components/routing/PrivateRoute';
 import AddBtn from './components/layout/Addbtn';
 import Footer from './components/layout/Footer';
+import Success from './components/pages/Success';
+import Cancel from './components/pages/Cancel';
 
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
@@ -20,6 +22,8 @@ import AuthState from './context/auth/AuthState';
 import AlertState from './context/alert/AlertState';
 import setAuthToken from './utils/setAuthToken';
 import './App.css';
+import About from './components/pages/About';
+import Contact from './components/pages/Contact';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -45,6 +49,8 @@ const App = () => {
                   <Alerts />
                   <Routes>
                     <Route exact path='/' element={<Home />} />
+                    <Route exact path='/about' element={<About />} />
+                    <Route exact path='/contact' element={<Contact />} />
                     <Route exact path='/product/:id' element={<Product />} />
                     <Route exact path='/products' element={<Products />} />
                     <Route exact path='/carts' element={
@@ -54,6 +60,8 @@ const App = () => {
                     } />
                     <Route exact path='/register' element={<Register />} />
                     <Route exact path='/login' element={<Login />} />
+                    <Route exact path='/success' element={<Success />} />
+                    <Route exact path='/cancel' element={<Cancel />} />
                   </Routes>
                 </div>
                 <AddBtn />

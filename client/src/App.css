@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Poppins:ital,wght@0,200;0,300;0,400;1,200&display=swap');
+
 :root {
   --primarys-color: #003699;
   --darks-color: #333333;
@@ -44,10 +46,18 @@
   opacity: 0.9;
   background: var(--lights-color);
   color: #333;
+  position: fixed;
+  z-index: 10;
+  width: 70%;
 }
 
 .alert-dangers {
   background: var(--dangers-color);
+  color: #fff;
+}
+
+.alert-success {
+  background: var(--success-color);
   color: #fff;
 }
 
@@ -73,6 +83,7 @@
   font-size: 13px;
   font-weight: bold;
   z-index: 1; 
+  max-height: 30px !important;
 }
 
 .login {
@@ -86,6 +97,225 @@
   margin-top: 40px; 
   margin-bottom: 40px;
 }
+
+.success-page {
+  background: var(--success-color);
+  height: 300px;
+  width: 60%;
+  margin-bottom: 2rem;
+}
+
+.success-page p {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+  top: 30%;
+  letter-spacing: 2px;
+}
+
+.success-btn {
+  width: 100%;
+}
+
+.success-btn button {
+  width: 60%;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cancel-page {
+  background-color: #ff7b00;
+  height: 300px;
+  width: 60%;
+  margin-bottom: 2rem;
+}
+
+.cancel-page p {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+  top: 30%;
+  letter-spacing: 2px;
+}
+
+.cancel-btn {
+  width: 100%;
+}
+
+.cancel-btn button {
+  width: 60%;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.contact_cont {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.contact {
+  height: 450px;
+  width: 350px;
+  border-radius: 5px;
+}
+
+.contact-info-cont {
+  color: #f4f4f4;
+  width: 250px;
+  background-color: #333333;
+  height: 450px;
+  opacity: 0.9;
+  border-radius: 5px;
+}
+
+.contact-info {
+  position: relative;
+  top: 50px;
+  width: 150px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-info img {
+  width: 40px;
+  margin-bottom: -11px;
+}
+
+.contact-info h5 {
+  font-family: bodoni moda;
+  font-size: 30px;
+}
+
+.contact-info p {
+  font-family: bodoni moda;
+  font-size: 8px;
+  letter-spacing: 5px;
+}
+
+.contact-icons {
+  position: relative;
+  top: 18px;
+  
+}
+
+.contact-icons li {
+  display: flex;
+  border-bottom: 0.3px solid #ff7b00;
+}
+
+.contact-icons li i {
+  position: relative;
+  top: 13px;
+  font-size: 14px;
+  background-color: #ff7b00;
+  width: 22px;
+  height: 22px;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.contact-icons li span {
+  text-align: left;
+  padding-left: 20px;
+  line-height: 0.3px;
+  margin-bottom: 7px;
+}
+
+.contact-icons li span h6 {
+  font-family: bodoni moda;
+  font-size: 12px;
+}
+
+.contact-icons li span p {
+  letter-spacing: 1px;
+}
+
+.contact-side-cont {
+  height: 450px;
+  width: 450px;
+  position: relative;
+  top: -40px;
+  left: 30px;
+}
+
+.contact-side {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-side h1 {
+  font-size: 27px;
+}
+
+.contact-side-img {
+  display: flex;
+}
+
+.contact-side img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.contact-side-img p {
+  position: relative;
+  left: 20px;
+  bottom: 9px;
+  font-weight: 100;
+}
+
+.contact-side-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-side-btn p {
+  background-color: purple;
+  color: #fff;
+  padding: 10px 120px;
+  border-radius: 5px;
+}
+
+.contact-side-btn i {
+  position: relative;
+  top: 15px;
+  font-size: 33px;
+  background-color: #F1F3F4;
+  width: 42px;
+  height: 42px;
+  border-radius: 5px;
+  padding-top: 3px;
+  text-align: center;
+}
+
+.contact-side ul {
+  position: relative;
+  top: -15px;
+}
+
+.contact-side li {
+  display: flex;
+}
+
+.contact-side li i {
+  font-size: 22px;
+  padding: 4px;
+}
+
+.contact-side li span {
+  font-weight: 100;
+  padding-left: 20px;
+  line-height: 0.3px;
+  margin-bottom: 7px;
+}
+
 
 
 /* Grid */
@@ -214,6 +444,7 @@
 }
 
 .footer {
+  width: 100% !important;
   margin-top: 5rem;
 }
 
@@ -221,22 +452,141 @@
   background-color: #fff !important;
 }
 
+.hidden {
+  display: none;
+}
+
+.mapControl {
+  width: 500px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #f4f4f4;
+  margin: 0 auto;
+}
+
+.mapInput {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.mapControl i {
+  margin-left: 30px !important;
+  justify-self: flex-end;
+  position: relative;
+  top: 17px;
+  cursor: pointer;
+}
+
+.mapControl .input-field {
+  margin-top: 0 !important;
+  margin-bottom: -30px !important;
+}
+
+.near-me {
+  position: relative;
+  left: 15px;
+  
+}
+
+.near-me:hover {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.mapControl input {
+  font-size: 13px !important;
+}
+
+.mapControl p{
+  font-weight: 700;
+}
+
+.mapControl button {
+  width: 115px;
+  margin-right: -25px;
+  position: relative;
+  top: 7px;
+}
+
+.aboutUs-img {
+    height: 400px;
+    width: 100%;
+}
+
+.aboutUs h1 {
+  font-size: 3rem;
+  font-family: bodoni moda;
+  font-weight: 800;
+  margin-bottom: -10px ;
+}
+
+.aboutUs p {
+  width: 360px;
+  margin-bottom: -30px;
+}
+
+/* Styling for ProductItem */
+.section {
+    padding: 4rem 0 2rem;
+}
+
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.icon {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+}
+
+img, video {
+    width: 100%;
+    height: auto;
+}
 
 @media (max-width: 1200px) {
-
-  /* .nav-img {
-    margin-top: 10px;
-    margin-left: 165px;
-} */
 
   .grid-2,
   .grid-3,
   .grid-4 {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .aboutUs h1 {
+    font-size: 2rem;
+  }
+
+  .aboutUs p {
+    width: 320px;
+  }
+
+  .contact-side {
+    width: 80%;
+  }
+
+  .contact-side-btn p {
+    padding: 10px 70px;
+  }
+
 }
 
 @media (max-width: 992px) {
+
   .nav-img {
     display: none;
   }
@@ -249,6 +599,36 @@
   .cart-total {
     top: -16px !important;
     margin-left: -34px !important;
+  }
+
+  .user-name {
+    color: #28a745;
+    font-weight: bold;
+    padding-left: 32px;
+  }
+
+  .contact-side {
+    width: 75%;
+  }
+
+  .contact {
+    height: 420px;
+    width: 320px;
+  }
+
+  .contact-info-cont {
+    width: 220px;
+    height: 420px;
+  }
+
+  .success-page {
+    position: relative;
+    top: 20px;
+  }
+  
+  .cancel-page {
+    position: relative;
+    top: 20px;
   }
 }
 
@@ -274,14 +654,28 @@
     margin-left: -34px !important;
   }
 
-  .user-name {
-    color: #28a745;
-    font-weight: bold;
-    padding-left: 32px;
+  .contact-side {
+    width: 70%;
   }
+
+  .contact-side-btn p {
+    padding: 10px 60px;
+  }
+
+  .contact {
+    height: 380px;
+    width: 280px;
+  }
+
+  .contact-info-cont {
+    width: 180px;
+    height: 380px;
+  }
+
 }
 
 @media (max-width: 550px) {
+
   .product-cont {
     margin: 0 auto;
     width: 70%;
@@ -322,13 +716,24 @@
   .bold-text {
     font-size: 10px;
   }
+
+  .contact-side-cont {
+    position: relative;
+    top: 10px;
+    left: 2px;
+  }
+
+  .contact-info {
+  position: relative;
+  top: 25px;
+}
+
+  .mapControl {
+    width: 450px;
+  }
 }
 
 @media (max-width: 420px) {
-  /* .nav-img {
-    margin-top: 7px;
-    margin-left: 5px;
-  } */
 
   .product-cont {
     margin: 0 auto;

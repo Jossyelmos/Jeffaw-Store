@@ -3,16 +3,21 @@ import CartItem from './CartItem';
 import Spinner from '../components/layout/Spinner';
 import ProductContext from '../context/product/productContext';
 import AuthContext from '../context/auth/authContext';
+import AlertContext from '../context/alert/alertContext';
+import { loadStripe } from '@stripe/stripe-js';
 
 const Carts = () => {
     const productContext = useContext(ProductContext);
     const authContext = useContext(AuthContext);
+    const alertContext = useContext(AlertContext);
 
     const { carts, total, clearCart, getCarts, loading } = productContext;
+    const { setAlert } = alertContext;
 
     useEffect(() => {
         authContext.loadUser();
         getCarts();
+
         // eslint-disable-next-line
     }, []);
 
@@ -25,6 +30,33 @@ const Carts = () => {
                 </header>
             </section>
         )
+    }
+
+    const handlePayment = async () => {
+
+        if (authContext.user.email) {
+            const stripePromise = await loadStripe("pk_test_51Ok9NNDgRkBhUUI2vf3Ii7wq6kVJurTTasvD98p4anc3dSGJEioM1DwyjBjAt8nNiDeXNF64UQxPL0m4BqpI5jFa00FTF6jncI");
+        
+            const res = await fetch('/checkout-payment', {
+                method: 'POST',
+                headers: {
+                    "Content-Type" : "application/json"
+                },
+                body: JSON.stringify(carts)
+            })
+
+            if (res.statusCode === 500) return;
+
+            const data = await res.json();
+            console.log(data);
+
+            setAlert('Redirect to Payment Gateway...', 'success');
+            stripePromise.redirectToCheckout({sessionId: data})
+
+        } else {
+            setAlert('You have not login...', 'dangers');
+        }
+        
     }
 
     return (
@@ -46,7 +78,10 @@ const Carts = () => {
                                 Total <span className='right !important'>${total}</span>
                             </h4>
                         </div>
-                        <div className='all-center my-3'>
+                        <div className='all-center my-3 grid-2'>
+                            <button className="btn waves-effect waves-light GREEN" onClick={handlePayment}>
+                                CHECKOUT
+                            </button>
                             <button className="btn waves-effect waves-light red" onClick={clearCart}>
                                 CLEAR CART
                             </button>

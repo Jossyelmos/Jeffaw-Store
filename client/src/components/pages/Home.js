@@ -46,25 +46,25 @@ const Home = () => {
         <h2>Jeffaw Mega Store</h2>
         <p>Bringing the world class online MEGA STORE close to your door step.</p>
         <div style={{
-          padding: "0 20px"
+          padding: "0 20px",
         }}>
           <Carousel
             data={data}
             time={3000}
-            width="850px"
-            height="550px"
+            width="750px"
+            height="500px"
             captionStyle={captionStyle}
             radius="10px"
             captionPosition="bottom"
             automatic={true}
             dots={true}
-            pauseIconColor="white"
+            pauseIconColor="lightgrey"
             pauseIconSize="40px"
-            slideBackgroundColor="darkgrey"
+            slideBackgroundColor="white"
             slideImageFit="contain"
             style={{
               textAlign: "center",
-              maxWidth: "850px",
+              maxWidth: "750px",
               maxHeight: "500px",
               margin: "40px auto",
             }}
@@ -75,4 +75,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;

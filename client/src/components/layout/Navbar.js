@@ -39,7 +39,9 @@ const Navbar = ({ title, icon }) => {
                     </div>
                 </Link>
             </li>
-            <li className='user-name'> Hi, {user && user.name}</li>
+            <li className='user-name'>
+                Hi, {user && user.name}
+            </li>
             <li>
                 <a onClick={onLogout} href="#!" className="hide-sm"> 
                     Logout
@@ -56,12 +58,12 @@ const Navbar = ({ title, icon }) => {
                 </Link>
             </li>
             <li>
-                <Link to="/badges.html">
+                <Link to="/about">
                     About
                 </Link>
             </li>
             <li>
-                <Link to="/collapsible.html">
+                <Link to="/contact">
                     Contacts
                 </Link>
             </li>
@@ -87,11 +89,12 @@ const Navbar = ({ title, icon }) => {
     )
 
     return (
+        <div className="sticky-nav">
           <nav className='blue'>
             <div className="nav-wrapper">
                 <img className='nav-img' src={icon} alt='logo' />
                 <a href="#!" className="brand-logo">{title}</a>
-                <a href="#!" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+                <a href="#!" data-target="mobile-demo" className="sidenav-trigger" draggable><i className="material-icons">menu</i></a>
                 <ul className="right hide-on-med-and-down">
                     {isAuthenticated ? authLinks : guestLinks}
                 </ul>
@@ -99,7 +102,8 @@ const Navbar = ({ title, icon }) => {
                 <ul className="sidenav" id="mobile-demo">
                     {isAuthenticated ? authLinks : guestLinks}
                 </ul>
-        </nav>
+            </nav>
+        </div>
     )
 };
 
