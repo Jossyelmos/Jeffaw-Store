@@ -66,24 +66,20 @@
 }
 
 .carts {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color:rgb(254, 12, 12);
-  position: relative;
-  top: -3.5rem !important;
-  margin-left: 16px !important;
+  position: absolute;
+  top: -.9rem;
 }
 
 .cart-total{
-  position: absolute;
-  top: -22px !important;
-  margin-left: 5px !important;
-  color:  #fff !important;
+  position: relative;
+  padding: .1rem .3rem;
+  border-radius: 50%;
+  background-color:rgb(254, 12, 12);
+  margin-left: 15px;
+  color:  #fff;
   font-size: 13px;
   font-weight: bold;
-  z-index: 1; 
-  max-height: 30px !important;
+  z-index: 1;
 }
 
 .login {
@@ -559,6 +555,10 @@ img, video {
     height: auto;
 }
 
+.product-cont {
+  margin-top: 1rem;
+}
+
 @media (max-width: 1200px) {
 
   .grid-2,
@@ -593,12 +593,12 @@ img, video {
 
   .carts {
     position: relative;
-    top: 2px !important;
+    top: 2px;
   }
 
   .cart-total {
-    top: -16px !important;
-    margin-left: -34px !important;
+    top: -16px;
+    margin-left: -40px;
   }
 
   .user-name {
@@ -644,16 +644,6 @@ img, video {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .carts {
-    position: relative;
-    top: 2px !important;
-  }
-
-  .cart-total {
-    top: -16px !important;
-    margin-left: -34px !important;
-  }
-
   .contact-side {
     width: 70%;
   }
@@ -689,16 +679,6 @@ img, video {
   .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
-  }
-
-  .carts {
-    position: relative;
-    top: 2px !important;
-  }
-
-  .cart-total {
-    top: -16px !important;
-    margin-left: -34px !important;
   }
 
   .cart-remove {
